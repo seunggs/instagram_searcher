@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<meta lang="EN" charset="UTF-8">
+		
+		<title>Thinkful AngularJS Unit 1 Lesson 2 - ngMadLibs</title>
+		
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/animation.css">
+
+	</head>
+	<body>
+
+		<main class="wrapper">
+			<article class="container">
+				<img src="images/ng-instagram.png" alt="Instagram Searcher Logo" class="logo">
+				<form ng-submit="search()" novalidate>
+					<input type="text" placeholder="Enter a tag to search" ng-model="formData.tagSearch" autofocus required>
+					<input type="submit" value="Submit" required>
+				</form>
+			</article>
+		</main>
+
+		<!-- scripts -->
+		<script src="scripts/angular.min.js"></script>
+		<script src="scripts/angular-animate.min.js"></script>
+		<script src="scripts/app.js"></script>
+
+	</body>
+</html>

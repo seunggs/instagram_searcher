@@ -1,0 +1,12 @@
+.wrapper {
+	width: 100%;
+}
+
+.container {
+	width: 840px;
+	margin: 0 auto;
+}
+
+.logo {
+	text-align: center;
+}
