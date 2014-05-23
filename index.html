@@ -14,11 +14,15 @@
 
 		<main class="wrapper">
 			<article class="container">
-				<img src="images/ng-instagram.png" alt="Instagram Searcher Logo" class="logo">
-				<form ng-submit="search()" novalidate>
-					<input type="text" placeholder="Enter a tag to search" ng-model="formData.tagSearch" autofocus required>
-					<input type="submit" value="Submit" required>
-				</form>
+				<div class="logo">
+					<img src="images/ng-instagram.png" alt="Instagram Searcher Logo">
+				</div>
+				<div class="inputs">
+					<form ng-submit="search()" novalidate>
+						<input type="text" placeholder="Enter a tag to search" ng-model="formData.tagSearch" class="textInput" autofocus required>
+						<input type="submit" value="Submit" class="submitButton" required>
+					</form>
+				</div>
 			</article>
 		</main>
 

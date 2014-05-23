@@ -3,10 +3,40 @@
 }
 
 .container {
-	width: 840px;
+	width: 600px;
 	margin: 0 auto;
 }
 
 .logo {
 	text-align: center;
+	padding: 20px;
+	margin-top: 50px;
+}
+
+.inputs {
+	text-align: center;
+}
+
+.textInput {
+	border: 1px solid #e7e7e7;
+	height: 24px;
+	padding: 5px;
+}
+
+input:focus {
+	outline: none;
+	box-shadow: 0 0 3px 0 #86CDFF;
+}
+
+.submitButton {
+  height: 37px;
+  padding: 0 14px;
+  background-color: #2469AF;
+  border: 0;
+	color: #fff;
+	margin-left: 2px;
+}
+
+.submitButton:hover, .sbumitButton:active {
+	background: #0f6fab;
 }
