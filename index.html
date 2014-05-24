@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="css/animation.css">
 
 	</head>
-	<body>
+	<body ng-controller="mainCtrl">
 
 		<main class="wrapper">
 			<article class="container">
@@ -18,10 +18,18 @@
 					<img src="images/ng-instagram.png" alt="Instagram Searcher Logo">
 				</div>
 				<div class="inputs">
-					<form ng-submit="search()" novalidate>
-						<input type="text" placeholder="Enter a tag to search" ng-model="formData.tagSearch" class="textInput" autofocus required>
-						<input type="submit" value="Submit" class="submitButton" required>
+					<form name="searchForm" ng-submit="submitted = true; search(formData.tagSearch);" novalidate>
+						<input type="text" placeholder="Enter a tag to search" name="tagSearch" ng-model="formData.tagSearch" class="textInput" autofocus required>
+						<input type="submit" value="Submit" class="submitButton">
+						<p class="errormsg" ng-if="submitted && searchForm.tagSearch.$invalid">Please input a valid text.</p> 
+						<p class="loading-animation" ng-if="submitted && searchForm.$valid && !responseValid">Searching Instagram for photos tagged with "{{ formData.tagSearch }}"...</p>
 					</form>
+				</div>
+				<div class="photo-container">
+					<p ng-if="responseValid && submitted">We found {{ photoCount }} results for {{ formData.tagSearch }}.</p>
+					<div class="photo-item" ng-repeat="photo in photos">
+						<img ng-src="{{ photo.images.standard_resolution.url }}" style="width: 270px; height: 270px;">
+					</div>
 				</div>
 			</article>
 		</main>

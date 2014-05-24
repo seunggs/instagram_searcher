@@ -3,14 +3,15 @@
 }
 
 .container {
-	width: 600px;
+	width: 860px;
+	padding; 0;
 	margin: 0 auto;
 }
 
 .logo {
 	text-align: center;
 	padding: 20px;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 .inputs {
@@ -37,6 +38,21 @@ input:focus {
 	margin-left: 2px;
 }
 
-.submitButton:hover, .sbumitButton:active {
-	background: #0f6fab;
+.errormsg {
+	color: red;
+}
+
+.photo-container {
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.photo-container p {
+	padding: 10px;
+}
+
+.photo-item {
+	float: left;
+	margin: 7px;
 }

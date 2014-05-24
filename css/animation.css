@@ -1,6 +1,6 @@
-.page-change-animation.ng-hide-remove,
-.page-change-animation.ng-hide-add {
-	display:block !important;
+.loading-animation.ng-enter,
+.loading-animation.ng-leave {
+
 }
 
 /*
@@ -20,17 +20,32 @@
 }
 */
 
-.page-change-animation.ng-hide-remove {
-	-webkit-animation: 0.5s show;
-	animation: 0.5s show;
+.loading-animation.ng-enter {
+	-webkit-animation: blink-enter 0.5s;
+	animation: blink-enter 0.5s;
 }
 
-@keyframes show {
+.loading-animation.ng-leave {
+	-webkit-animation: blink-leave 0.5s;
+	animation: blink-leave 0.5s;
+}
+
+@keyframes blink-enter {
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
 
-@-webkit-keyframes show {
+@-webkit-keyframes blink-enter {
 	from { opacity: 0; }
 	to { opacity: 1; }
+}
+
+@keyframes blink-leave {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+@-webkit-keyframes blink-leave {
+	from { opacity: 1; }
+	to { opacity: 0; }
 }
